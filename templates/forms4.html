@@ -1,0 +1,916 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Elite Fitness Club</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'vendor/metisMenu/metisMenu.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'dist/css/sb-admin-2.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <link href="{% static 'mane/bootstrap-datetimepicker.min.css' %}" rel="stylesheet" media="screen">
+
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="index.html">SB Admin v2.0</a> -->
+                <a class="navbar-brand" href="#">Elite Fitness Club</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+
+
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                        <em>Yesterday</em>
+                                    </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Messages</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <!-- /.dropdown-messages -->
+                <!-- </li> -->
+                <!-- /.dropdown -->
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 1</strong>
+                                        <span class="pull-right text-muted">40% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                            <span class="sr-only">40% Complete (success)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 2</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Complete</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 3</strong>
+                                        <span class="pull-right text-muted">60% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                            <span class="sr-only">60% Complete (warning)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Task 4</strong>
+                                        <span class="pull-right text-muted">80% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <!-- /.dropdown-tasks -->
+                <!-- </li> -->
+                <!-- /.dropdown -->
+
+
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-comment fa-fw"></i> New Comment
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> Message Sent
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-tasks fa-fw"></i> New Task
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Alerts</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul> -->
+                    <!-- /.dropdown-alerts -->
+                <!-- </li> -->
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+
+                        <li class="divider"></li>
+                        <li><a href="/logout_account"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <!--
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div> -->
+                            <!-- /input-group -->
+                        <!-- </li> -->
+
+                                <li>
+                            <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Tableau de bord </a>
+                        </li>
+                        <li>
+                            <!-- <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Employés<span class="fa arrow"></span></a> -->
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> Gestion du personnel <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/forms">Créer un employé</a>
+                                </li>
+                                <li>
+                                    <a href="/table4"> Consulter les employés </a>
+                                </li>
+                                <li>
+                                    <a href="/table5"> Pointage horaire </a>
+                                </li>
+
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <!-- <a href="#"><i class="fa fa-wrench fa-fw"></i> Statistiques <span class="fa arrow"></span></a> -->
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Statistiques <span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+
+                                <li>
+                                    <a href="/table7"> Individuelles </a>
+                                </li>
+                                <li>
+                                    <a href="/table007"> Affluence </a>
+                                </li>
+
+                                <li>
+                                    <a href="/statParJour"> Quotidiennes </a>
+                                </li>
+                                <li>
+                                    <a href="/hebdomadaires"> Hebdomadaires </a>
+                                </li>
+                                <li>
+                                    <a href="/statParMois"> Mensuelles </a>
+                                </li>
+                                <li>
+                                    <a href="/statCroises"> Croisées </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="/parrainage"><i class="fa fa-user"></i> Parrainage </a>
+                        </li>
+                        <!--
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
+                        </li>
+                        -->
+
+                        <!-- <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
+                        </li>
+                        -->
+                        <!--
+                        <li>
+                            <a href="#"><i class="fa fa-wrench fa-fw"></i> UI Elements<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="panels-wells.html">Panels and Wells</a>
+                                </li>
+                                <li>
+                                    <a href="buttons.html">Buttons</a>
+                                </li>
+                                <li>
+                                    <a href="notifications.html">Notifications</a>
+                                </li>
+                                <li>
+                                    <a href="typography.html">Typography</a>
+                                </li>
+                                <li>
+                                    <a href="icons.html"> Icons</a>
+                                </li>
+                                <li>
+                                    <a href="grid.html">Grid</a>
+                                </li>
+                            </ul> -->
+                            <!-- /.nav-second-level -->
+                        <!-- </li> -->
+                        <!-- <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Second Level Item</a>
+                                </li>
+                                <li>
+                                    <a href="#">Third Level <span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Third Level Item</a>
+                                        </li>
+                                    </ul> -->
+                                    <!-- /.nav-third-level -->
+                                <!--</li>
+                            </ul> -->
+                            <!-- /.nav-second-level -->
+                        <!-- </li> -->
+
+
+                        <!--
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
+                                </li>
+                            </ul> -->
+                            <!-- /.nav-second-level -->
+                        <!-- </li> -->
+
+
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="page-header"> {{utilisateur.nom}} {{utilisateur.prenom}} </h2>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Formulaire de l'abonné
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <form enctype="multipart/form-data" action="{% url 'edit_user_valid' %}" method="post"> {% csrf_token %}
+
+                                        <label style="color:#ffa500;text-decoration:underline;">
+                                                <h4> IDENTIFICATION DE L'ABONNÉ  </h4>
+                                        </label>
+
+                                        <div class="row">
+                                            
+                                            <div class="col-md-6">
+                                                <input type="hidden" value="{{utilisateur.civilite}}" id="civilite1"/>
+                                                <input type="hidden" value="{{utilisateur.id_typeabonnement}}" id="id_typeabonnement1"/>
+
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6"> 
+                                                            <label class="control-label">Civilité <span style="color:#f00">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="ui-select">
+                                                                <select id="civilite" name="civilite">
+
+                                                                    <option value="Madame" selected="selected">Madame</option>
+                                                                    <option value="Mademoiselle" selected="selected">Mademoiselle</option>
+                                                                    <option value="Monsieur" selected="selected">Monsieur</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6"> 
+                                                            <label class="control-label">Prénom <span style="color:#f00">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input class="form-control" type="text"  value="{{utilisateur.prenom}}" required name="prenom" id="prenom"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                 <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6"> 
+                                                            <label class="control-label">Nom <span style="color:#f00">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input class="form-control" type="text" required value="{{utilisateur.nom}}" name="nom" id="nom"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <!-- End lg-12 -->
+
+                                            <div class="col-md-6">
+
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6"> 
+                                                            <label class="control-label">Date de Naissance <span style="color:#f00">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                             <input class="form-control" required type="date" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" value="{{utilisateur.dateNaiss}}" id="dateNaiss" name="dateNaiss"/>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                                
+
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6"> 
+                                                            <label class="control-label">Profession <span style="color:#f00">*</span></label>
+                                                        </div>
+                                                        <div class="col-md-6">
+
+                                                            <input class="form-control"  type="text" value="{{utilisateur.profession}}" name="profession"/>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <!-- ENFIN ENFIN -->
+
+                                            <!-- COOL NON OK 1 -->
+                                                <!--<div style="float: right; padding-top: 20px;">
+
+                                                    <button class="btn btn-warning" name="ok" value="Modifier">Modifier</button>
+                                                    <a href="/dashboard"  class="btn btn-success" role="button">&nbsp;Annuler &nbsp;&nbsp; </a>
+                                                    <button class="btn btn-danger" name="ok" value="Supprimer">Supprimer</button>
+                                                </div>-->
+                                            <!-- COOL NON OK 1 -->
+
+
+
+
+
+                                        </div>
+                                        <!-- row -->
+
+                                        <!-- <div class="col-lg-12">
+                                            <div class="container">
+                                                <div class="row">-->
+
+
+                                                    <!---  code ajouté 1
+
+                                                    <div class="col-lg-6">
+                                                            <label style="color:#ffa500;text-decoration:underline;">
+                                                                <h4>DONNEES ABONNEMENT </h4>
+                                                            </label>
+
+                                                            <div class="row">
+
+                                                                <div class="col-lg-12">
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <label class="control-label"> Nombres de séances  Total </label>
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                <input class="form-control" type="number" value="{{paiement.nbseances_total}}" name="nbseances_total"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <label class="control-label"> Date de Fin</label>
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                <input class="form-control"  type="date" pattern="[0-9]{4}-[0-9]{1,2}-[0-9]{1,2}" value="{{paiement.date_fin}}" id="date_fin" name="date_fin"/>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                </div>
+                                                            </div>
+                                                    </div>
+
+
+                                                    <!---  code ajouté 2-->
+
+
+
+
+                                                <!-- </div>
+                                            </div>
+                                        </div> blcok d'en haut -->
+
+
+                                        <!-- Block contact -->
+
+                                                <div class="row">
+
+
+                                                <div class="col-md-6">
+
+                                                    <label style="color:#ffa500;text-decoration:underline;">
+                                                                <h4>CONTACTS </h4>
+                                                            </label>
+
+                                                       <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <label class="control-label">Numéro de téléphone</label>
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                <input class="form-control" type="number" pattern="[0-9]{9,14}" value="{{utilisateur.telephone}}"  name="telephone" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <label class="control-label">Adresse e-mail</label>
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                <input class="form-control" type="email" name="email" value="{{utilisateur.email}}" />
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-xs-6">
+                                                                                <label class="control-label">Adresse postale</label>
+                                                                            </div>
+                                                                            <div class="col-xs-6">
+                                                                                  <input class="form-control" type="text" name="adresse" pattern="[A-Za-z ]{1,40}" value="{{utilisateur.adresse}}"/>
+                                                                            </div>
+                                                                        </div>
+
+                                                </div>
+                                                </div>
+
+                                                    <div class="col-md-6">
+
+                                                    <label style="color:#ffa500;text-decoration:underline;">
+                                                        <h4>CONTACTS D'URGENCE </h4>
+                                                    </label>
+
+                                                    <table class="table table-responsive table-bordered">
+                                                 <!--<caption>Contacts d'urgence</caption>-->
+                                                        <thead>
+                                                            <tr>
+                                                                    <th>Nom </th>
+                                                                    <th>Prénom </th>
+                                                                    <th>Téléphone </th>
+                                                            </tr>
+                                                        </thead>
+
+                                                        <tbody>
+                                                        <input type="hidden" name="id" value="{{utilisateur.nom1}}">
+                                                        <input type="hidden" name="idPaiement" value="{{paiement.idPaiement}}">
+
+                                                            <tr>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="nom1" value="{{utilisateur.nom1}}"/>
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="prenom1" value="{{utilisateur.prenom1}}"/>
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="telephone1" value="{{utilisateur.telephone1}}"/>
+                                                                </td>
+                                                            </tr>
+
+                                                             <tr>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="nom2" value="{{utilisateur.nom2}}"/>
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="prenom2" value="{{utilisateur.prenom2}}" />
+                                                                </td>
+                                                                <td>
+                                                                    <input class="form-control" type="text" name="telephone2" value="{{utilisateur.telephone2}}"  />
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                            </div>
+
+                                        <!-- end block contact -->
+                                        </div>
+
+                                        <div class="row">
+                                                <div class="col-md-6">
+
+                                                     <label style="color:#ffa500;text-decoration:underline;">
+                                                                <h4>ABONNEMENT </h4>
+                                                            </label>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-xs-6">
+                                                                <label class="control-label">Date de debut </label>
+                                                            </div>
+                                                            <div class="col-xs-6">
+
+                                                                <input class="form-control"  type="date" value="{{paiement.date_debut}}" id="date_debut" name="date_debut" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))"/>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <label class="control-label"> Nombres de séances consommées  </label>
+                                                            </div>
+                                                            <div class="col-md-6">
+
+                                                                <input class="form-control"  type="text" value="{{paiement.nbseances_en_cours}}" name="nbseances_en_cours"/>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                     <div class="form-group">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="control-label">Abonnement</label>
+                                                        </div>
+                                                        <div class="col-md-6">
+
+                                                            <div class="ui-select">
+                                                                <select id="abonnement" name="id_typeabonnement" style="width:100%;">
+                                                                    <option value="1">Abonnement Mensuel (Ext)</option>
+                                                                    <option value="2">Abonnement Trimestriel (Ext)</option>
+                                                                    <option value="3">Abonnement Semestriel (Ext)</option>
+                                                                    <option value="4">Abonnement Annuel (Ext)</option>
+                                                                    <option value="5">Ticket Journée (Ext)</option>
+                                                                    <option value="6">Abonnement Mensuel (KEBE)</option>
+                                                                    <option value="7">Abonnement Trimestriel (KEBE)</option>
+                                                                    <option value="8">Abonnement Semestriel (KEBE)</option>
+                                                                    <option value="9">Abonnement Annuel (KEBE)</option>
+                                                                    <option value="10">Abonnement 1 séance Etudiant CrossFit</option>
+                                                                    <option value="11">Forfait salle et Activité Annexe (Forfaits)</option>
+                                                                    <option value="12"> Tarif Etudiant</option>
+                                                                    <option value="13"> Abonnement Mensuel CrossFit</option>
+                                                                    <option value="14"> Abonnement mi-mois</option>
+                                                                    <option value="15"> Abonnement 1 journée CrossFit</option>
+                                                                    <option value="16">Abonnement 5 séances CrossFit </option>
+                                                                    <option value="17"> Abonnement 10 séances CrossFit</option>
+                                                                    <option value="18">Heures Creuses </option>
+                                                                    <option value="19"> Abonnement Boxe </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                        <label style="color:white;;text-decoration:underline;">
+                                                                <h4>&nbsp; </h4>
+                                                            </label>
+
+
+                                                    <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-xs-6">
+                                                                        <label class="control-label"> Date de Fin</label>
+                                                                    </div>
+                                                                    <div class="col-xs-6">
+                                                                        <input class="form-control"  type="date" pattern="(?:19|20)[0-9]{2}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-9])|(?:(?!02)(?:0[1-9]|1[0-2])-(?:30))|(?:(?:0[13578]|1[02])-31))" value="{{paiement.date_fin}}" id="date_fin" name="date_fin"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+
+                                                            <div class="form-group">
+                                                                <div class="row">
+                                                                    <div class="col-xs-6">
+                                                                        <label class="control-label"> Nombres de séances  Total </label>
+                                                                    </div>
+                                                                    <div class="col-xs-6">
+                                                                        <input class="form-control" type="number" value="{{paiement.nbseances_total}}" name="nbseances_total"/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                </div>
+
+                                            </div>
+
+                                                <div style="float: right; padding-top: 20px;">
+
+
+                                                    <button class="btn btn-warning" name="ok" value="Modifier">Modifier</button>
+                                                    <a href="/dashboard"  class="btn btn-success" role="button">&nbsp;Annuler &nbsp;&nbsp; </a>
+                                                    <button class="btn btn-danger" name="ok" value="Supprimer">Supprimer</button>
+                                                </div>
+
+                                    </form>
+                                </div>
+                                
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'vendor/metisMenu/metisMenu.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
+
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap.min.js' %}"></script>
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/bootstrap-datetimepicker.js' %}"></script>
+  <script type="text/javascript" src="{% static  'mane/bootstrap/js/locales/bootstrap-datetimepicker.fr.js' %}"></script>
+
+      <script type="text/javascript">
+
+            $('#dateNaiss').datetimepicker({
+                    language:  'fr',
+                    weekStart: 1,
+                    format: "yyyy-mm-dd",
+                     todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 2,
+                        minView: 2,
+                        forceParse: 0
+             });
+
+              $('#date_fin').datetimepicker({
+                    language:  'fr',
+                    weekStart: 1,
+                    format: "yyyy-mm-dd",
+                     todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 2,
+                        minView: 2,
+                        forceParse: 0
+             });
+
+                 $('#date_debut').datetimepicker({
+                    language:  'fr',
+                    weekStart: 1,
+                    format: "yyyy-mm-dd",
+                     todayBtn:  1,
+                        autoclose: 1,
+                        todayHighlight: 1,
+                        startView: 2,
+                        minView: 2,
+                        forceParse: 0
+             });
+
+
+
+
+      </script>
+<script>
+    var id_typeabonnement1 = document.getElementById("id_typeabonnement1").value;
+    var valeur = parseInt(id_typeabonnement1)-parseInt(1)
+    document.getElementById("abonnement").options[valeur].selected = true;
+
+
+    var civilite1 = document.getElementById("civilite1").value;
+    document.getElementById("civilite").value = civilite1;
+
+</script>
+
+</body>
+
+</html>

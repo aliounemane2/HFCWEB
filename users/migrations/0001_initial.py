@@ -13,18 +13,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.CreateModel(
-            name='Paiement',
-            fields=[
-                ('idPaiement', models.AutoField(primary_key=True, serialize=False)),
-                ('date_debut', models.CharField(blank=True, max_length=22, null=True)),
-                ('date_fin', models.CharField(blank=True, max_length=22, null=True)),
-                ('idUser', models.IntegerField()),
-                ('nbseances_en_cours', models.IntegerField(default=0)),
-                ('nbseances_total', models.IntegerField(default=0)),
-                ('dateencours', models.CharField(blank=True, max_length=22, null=True)),
-            ],
-        ),
+
         migrations.CreateModel(
             name='Type_Abonnement',
             fields=[
@@ -56,6 +45,7 @@ class Migration(migrations.Migration):
                 ('telephone', models.CharField(blank=True, max_length=50, null=True)),
                 ('id_typeabonnement', models.IntegerField()),
                 ('photo', models.TextField(blank=True, null=True)),
+                #('status_email', models.CharField(max_length=1, default='1')),
             ],
         ),
     ]

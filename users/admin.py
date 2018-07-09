@@ -4,7 +4,7 @@ from import_export.admin import ImportExportModelAdmin
 from users.models import *
 
 
-# class UserAdmin(admin.ModelAdmin):
+# class UserAdmin(adminsss.ModelAdmin):
 class UserAdmin(ImportExportModelAdmin):
     list_display = ('nom', 'prenom', 'email')
     search_fields = ('telephone', 'email')

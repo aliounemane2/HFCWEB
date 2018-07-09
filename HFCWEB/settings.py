@@ -40,7 +40,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users',
+    'employers',
+    'essaies',
+    'adminsss',
     'import_export',
+    'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -86,17 +91,19 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.mysql',
         #'NAME': 'hfc_db',
-        #'USER': 'admin',
+        #'USER': 'adminsss',
         #'PASSWORD': 'lkrkas8g20fpixj3',
         #'HOST': '109.107.36.85',
         #'PORT': '3306',
 
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hfc_db',
+        #'NAME': 'hfc_db19052018',
+        #'NAME': 'hfc_db',
+        'NAME': 'hfc_dblast2',
         'USER': 'root',
         'PASSWORD': ''
     },
-    'syncdb': {
+    ########'syncdb': {
         #'ENGINE': 'django.db.backends.mysql',
         #'NAME': 'hfc_db4',
         #'USER': 'root',
@@ -108,16 +115,16 @@ DATABASES = {
         #'USER': 'root',
         #'PASSWORD': ''
 
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hfc_db',
-        'USER': 'admin',
+        ########'ENGINE': 'django.db.backends.mysql',
+        ########'NAME': 'hfc_db',
+        ########'USER': 'adminsss',
         #'USER': 'root',
         #'PASSWORD': '',
-        'PASSWORD': 'lkrkas8g20fpixj3',
-        'HOST': '109.107.36.85',
+        ########'PASSWORD': 'lkrkas8g20fpixj3',
+        ########'HOST': '109.107.36.85',
         #'PORT': '3306',
 
-    }
+    ########}
 
 }
 
@@ -144,7 +151,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'FR-fr'
 
 TIME_ZONE = 'UTC'
 
@@ -158,4 +166,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'elitefitnessclubkebe@gmail.com'
+EMAIL_HOST_PASSWORD = 'Elfit2017'
+EMAIL_USE_TLS = True
+FILE_CHARSET = 'utf-8'
+DEFAULT_FROM_EMAIL = 'Elite Fitness Club'

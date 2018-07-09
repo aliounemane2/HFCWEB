@@ -1,0 +1,170 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Elite Fitness Club</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="{% static 'vendor/metisMenu/metisMenu.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'dist/css/sb-admin-2.css' %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/bootstrap/bootstrap.min.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'assets/css/bootstrap/bootstrap-themes.css' %}" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+<link type="text/css" rel="stylesheet" href="assets/css/bootstrap/bootstrap-themes.css" />
+<link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+
+
+
+<!-- Styleswitch if  you don't chang theme , you can delete -->
+
+
+</head>
+
+<body>
+
+												<div id="calendar"></div>
+
+
+</body>
+
+
+
+
+
+
+    <!-- jQuery -->
+    <!-- <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script> -->
+
+    <!-- Bootstrap Core JavaScript -->
+    <!-- <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script> -->
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'vendor/metisMenu/metisMenu.min.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
+
+
+
+
+
+<!-- Jquery Library -->
+<script type="text/javascript" src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/js/jquery.ui.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- Modernizr Library For HTML5 And CSS3 -->
+<script type="text/javascript" src="{% static 'assets/js/modernizr/modernizr.js' %}"></script>
+<script type="text/javascript" src="{% static 'assets/plugins/mmenu/jquery.mmenu.js' %}"></script>
+<!-- Library 10+ Form plugins-->
+<script type="text/javascript" src="{% static 'assets/plugins/form/form.js' %}"></script>
+<!-- Datetime plugins -->
+<script type="text/javascript" src="{% static 'assets/plugins/datetime/datetime.js' %}"></script>
+<!-- Library Chart-->
+<script type="text/javascript" src="{% static 'assets/plugins/chart/chart.js' %}"></script>
+
+<script src="{% static 'assets/plugins/fullcalendar/fullcalendar.js' %}"></script>
+<link href="{% static 'assets/plugins/fullcalendar/fullcalendar.css' %}" rel="stylesheet" />
+<!-- Library  5+ plugins for bootstrap -->
+<script type="text/javascript" src="{% static 'assets/plugins/pluginsForBS/pluginsForBS.js' %}"></script>
+<!-- Library 10+ miscellaneous plugins -->
+<script type="text/javascript" src="{% static 'assets/plugins/miscellaneous/miscellaneous.js' %}"></script>
+
+
+    <script>
+	$(document).ready(function() {
+
+		//var date = new Date();
+		//var d = date.getDate();
+		//var m = date.getMonth();
+		//var y = date.getFullYear();
+
+		var d = 12;
+		var m = 7;
+		var y = 2017;
+
+
+
+
+		$('#calendar').fullCalendar({
+		            lang: 'fr',
+
+
+
+
+			header: {
+				left: 'title',
+				center: '',
+				right: ''
+			},
+			editable: true,
+			droppable: true,
+			events: [
+				{
+					title: '1',
+					start: '2018-06-06',
+					end: '2018-06-06',
+					color:"#f37864"
+				}/*,
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-10),
+					end: new Date(y, m, d-7),
+					color:"#1bc6b0"
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false,
+					color:"#7ace30"
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d-5, 19, 0),
+					end: new Date(y, m, d-4, 22, 30),
+					allDay: false,
+					color:"#ffcc33"
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 15),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false,
+					color:"#62707d"
+				}*/
+			],
+
+		});
+
+
+	});
+
+</script>
+
+</body>
+
+</html>
